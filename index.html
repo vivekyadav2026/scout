@@ -1,0 +1,761 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>National Youth Development & Scouting Organization</title>
+  
+  <!-- Meta Tags for SEO -->
+  <meta name="description" content="Empowering youth through character building, leadership development, outdoor survival learning, and community service. Premium portal for government organization.">
+  <meta name="keywords" content="youth development, scouting, character building, volunteering, leadership, government organization portal">
+  <meta name="author" content="National Youth Development Organization">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            scoutGreen: {
+              DEFAULT: '#0B5D1E',
+              light: '#1B8A3C',
+              dark: '#063811',
+              lightest: '#f0fdf4'
+            },
+            scoutGold: {
+              DEFAULT: '#F4B400',
+              light: '#ffc83b',
+              dark: '#c18f00',
+              lightest: '#fffbeb'
+            },
+            charcoal: '#1F2937',
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS for custom elements -->
+  <style>
+    /* Custom scrollbars */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    .dark ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #0B5D1E; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #063811; }
+    
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .dark .glass-nav {
+      background: rgba(15, 23, 42, 0.9);
+    }
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    /* Slide underline hover effect */
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; /* Tighter layout padding */
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #F4B400; /* Scout Gold */
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    .nav-link-active::after {
+      width: 100% !important;
+    }
+  </style>
+</head>
+<body class="font-sans text-charcoal bg-[#F8FAFC] dark:bg-slate-950 dark:text-slate-100 overflow-x-hidden transition-colors duration-300">
+
+                <!-- TOP UTILITY HEADER -->
+  <div class="hidden sm:flex bg-scoutGreen text-white text-[11px] py-1.5 px-4 md:px-8 justify-between items-center border-b border-white/10 z-50 relative dark:bg-slate-900 transition-colors">
+    <div class="flex items-center gap-6">
+      <span class="flex items-center gap-1.5">
+        <i class="fa-solid fa-location-dot text-scoutGold"></i>
+        <span class="font-medium">Scouts & Guides Office, Topdhara Rd, Vinay Nagar, Pal Bhichala, Ajmer, Rajasthan 305001</span>
+      </span>
+      <span class="h-3 w-px bg-white/25"></span>
+      <a href="tel:+918233327929" class="flex items-center gap-1.5 hover:text-scoutGold transition-colors">
+        <i class="fa-solid fa-phone text-scoutGold"></i>
+        <span class="font-medium">8233327929</span>
+      </a>
+    </div>
+    <div class="flex items-center gap-4">
+      <span class="text-white/60 hidden md:inline">National Youth Portal</span>
+      <div class="flex items-center gap-3">
+        <span class="text-white/80">Follow Us :</span>
+        <a href="#" class="w-6 h-6 rounded-full bg-white/10 hover:bg-scoutGold flex items-center justify-center text-white transition-all duration-300" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f text-[10px]"></i>
+        </a>
+        <a href="#" class="w-6 h-6 rounded-full bg-white/10 hover:bg-scoutGold flex items-center justify-center text-white transition-all duration-300" aria-label="Instagram">
+          <i class="fa-brands fa-instagram text-[10px]"></i>
+        </a>
+        <a href="#" class="w-6 h-6 rounded-full bg-white/10 hover:bg-scoutGold flex items-center justify-center text-white transition-all duration-300" aria-label="YouTube">
+          <i class="fa-brands fa-youtube text-[10px]"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION HEADER -->
+  <header class="glass-nav sticky top-0 z-40 transition-all duration-300 shadow-sm border-b border-slate-100 dark:border-slate-800/80 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 py-3 flex justify-between items-center transition-all duration-300" id="navbar-container">
+      
+      <!-- Brand Logo + Hierarchical Name -->
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <!-- Compact Logo container -->
+        <div class="w-11 h-11 md:w-12 md:h-12 flex-shrink-0 bg-white dark:bg-slate-950 p-0.5 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800/80 shadow-md transition-all duration-300 group-hover:scale-105" id="brand-logo-container">
+          <img src="assets/logo.png" alt="Bharat Scouts & Guides Logo" class="w-full h-full object-contain">
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[8px] md:text-[9px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 leading-none whitespace-nowrap">
+            RAJASTHAN STATE
+          </span>
+          <span class="font-display font-extrabold text-[12px] md:text-sm lg:text-base tracking-tight text-scoutGreen dark:text-white mt-0.5 mb-0.5 leading-none whitespace-nowrap">
+            BHARAT SCOUTS & GUIDES
+          </span>
+          <div class="flex items-center gap-1.5 mt-0.5 whitespace-nowrap">
+            <span class="h-[1.5px] w-6 bg-[#ff9933]"></span>
+            <span class="font-sans font-bold text-[8px] md:text-[9px] text-charcoal dark:text-white tracking-widest leading-none">TOPDARA, AJMER</span>
+            <span class="h-[1.5px] w-6 bg-[#138808]"></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden xl:flex items-center gap-4 2xl:gap-6 font-semibold text-[12px] 2xl:text-sm text-slate-800 dark:text-slate-200" id="desktop-nav-menu">
+        
+        <a href="index.html" class="nav-link nav-link-active text-scoutGreen dark:text-white after:w-full py-2 whitespace-nowrap">HOME</a>
+        
+        <!-- ABOUT US Mega Menu Trigger -->
+        <div class="relative group py-2 whitespace-nowrap">
+          <a href="about.html" class="nav-link hover:text-scoutGreen dark:hover:text-white transition-colors flex items-center gap-1 hover:text-scoutGreen dark:hover:text-white transition-colors whitespace-nowrap">
+            ABOUT US <i class="fa-solid fa-chevron-down text-[8px] transition-transform group-hover:rotate-180"></i>
+          </a>
+          
+          <!-- MEGA MENU OVERLAY CARD -->
+          <div class="absolute left-1/2 -translate-x-1/2 mt-4 w-[680px] rounded-3xl bg-white dark:bg-slate-900 shadow-2xl border border-slate-100 dark:border-slate-850 p-8 hidden group-hover:grid grid-cols-3 gap-8 animate-fade-in z-50">
+            <!-- Col 1: Foundation -->
+            <div class="space-y-4 text-left">
+              <h4 class="text-xs font-extrabold uppercase tracking-wider text-scoutGreen dark:text-scoutGreen-light">Our Foundation</h4>
+              <ul class="space-y-3 text-xs">
+                <li>
+                  <a href="about.html#history" class="group/item flex items-start gap-2.5 hover:text-scoutGreen dark:hover:text-white transition-colors">
+                    <i class="fa-solid fa-timeline text-scoutGold mt-0.5"></i>
+                    <div>
+                      <span class="block font-bold">Legacy & History</span>
+                      <span class="block text-[10px] text-slate-450 font-medium">Scouting since 1909</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="about.html#mission" class="group/item flex items-start gap-2.5 hover:text-scoutGreen dark:hover:text-white transition-colors">
+                    <i class="fa-solid fa-flag text-scoutGold mt-0.5"></i>
+                    <div>
+                      <span class="block font-bold">Mission & Vision</span>
+                      <span class="block text-[10px] text-slate-450 font-medium">Core ideals and values</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="about.html#objectives" class="group/item flex items-start gap-2.5 hover:text-scoutGreen dark:hover:text-white transition-colors">
+                    <i class="fa-solid fa-bullseye text-scoutGold mt-0.5"></i>
+                    <div>
+                      <span class="block font-bold">Our Objectives</span>
+                      <span class="block text-[10px] text-slate-450 font-medium">Patrol directives</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <!-- Col 2: Administration -->
+            <div class="space-y-4 text-left">
+              <h4 class="text-xs font-extrabold uppercase tracking-wider text-scoutGreen dark:text-scoutGreen-light">Governance</h4>
+              <ul class="space-y-3 text-xs">
+                <li>
+                  <a href="about.html#leadership" class="group/item flex items-start gap-2.5 hover:text-scoutGreen dark:hover:text-white transition-colors">
+                    <i class="fa-solid fa-user-shield text-scoutGold mt-0.5"></i>
+                    <div>
+                      <span class="block font-bold">Leadership Board</span>
+                      <span class="block text-[10px] text-slate-455 font-medium">Secretary & Joint Sec</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="about.html#structure" class="group/item flex items-start gap-2.5 hover:text-scoutGreen dark:hover:text-white transition-colors">
+                    <i class="fa-solid fa-sitemap text-scoutGold mt-0.5"></i>
+                    <div>
+                      <span class="block font-bold">Division Chart</span>
+                      <span class="block text-[10px] text-slate-455 font-medium">Organizational tree</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Col 3: Focus Spotlight -->
+            <div class="bg-slate-50 dark:bg-slate-950 p-5 rounded-2xl border border-slate-100 dark:border-slate-850 flex flex-col justify-between text-left">
+              <div class="space-y-2">
+                <span class="text-[9px] bg-scoutGold/20 text-scoutGold-dark dark:text-scoutGold px-2 py-0.5 rounded font-extrabold">DIVISION HQ</span>
+                <h5 class="font-bold text-xs text-slate-800 dark:text-white">Rajender Prasad Saraswat</h5>
+                <p class="text-[10px] text-slate-500 leading-relaxed">Secretary Topdara division Ajmer.</p>
+              </div>
+              <a href="contact.html" class="block text-center py-2 bg-scoutGreen text-white text-[10px] font-bold rounded-lg hover:bg-scoutGreen-light transition-all mt-4">Contact Office</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="activities.html" class="nav-link hover:text-scoutGreen dark:hover:text-white transition-colors py-2 whitespace-nowrap">ACTIVITIES</a>
+        <a href="camps-training.html" class="nav-link hover:text-scoutGreen dark:hover:text-white transition-colors py-2 whitespace-nowrap">CAMPS & TRAINING</a>
+        <a href="gallery.html" class="nav-link hover:text-scoutGreen dark:hover:text-white transition-colors py-2 whitespace-nowrap">GALLERY</a>
+        <a href="downloads.html" class="nav-link hover:text-scoutGreen dark:hover:text-white transition-colors py-2 whitespace-nowrap">DOWNLOADS</a>
+        <a href="notices.html" class="nav-link hover:text-scoutGreen dark:hover:text-white transition-colors py-2 whitespace-nowrap">NOTICES</a>
+        
+        <!-- Premium CTA Button -->
+        <a href="contact.html" class="px-4 py-2 rounded-full border border-scoutGreen text-scoutGreen dark:border-white/20 dark:text-white font-bold hover:bg-scoutGreen hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-all duration-300 shadow-sm whitespace-nowrap ">
+          CONTACT US
+        </a>
+
+        <!-- Extra Tools -->
+        <div class="h-5 w-px bg-slate-200 dark:bg-slate-800 mx-1"></div>
+        
+        <button id="search-toggle" class="p-2 text-slate-700 hover:text-scoutGreen dark:text-slate-355 dark:hover:text-white focus:outline-none" aria-label="Open Search">
+          <i class="fa-solid fa-magnifying-glass text-base"></i>
+        </button>
+
+        <button id="dark-theme-toggle" class="p-2 text-slate-700 hover:text-scoutGreen dark:text-slate-355 dark:hover:text-white focus:outline-none" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon text-base"></i>
+        </button>
+      </nav>
+
+      <!-- Mobile Navbar Trigger -->
+      <div class="flex xl:hidden items-center gap-2">
+        <button onclick="document.getElementById('search-toggle').click()" class="p-2 text-slate-700 dark:text-slate-355 focus:outline-none">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button onclick="document.getElementById('dark-theme-toggle').click()" class="p-2 text-slate-700 dark:text-slate-355 focus:outline-none">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button id="menu-btn" class="p-2 rounded-md hover:bg-slate-50 dark:hover:bg-slate-800 text-scoutGreen dark:text-slate-200 focus:outline-none">
+          <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-850 shadow-xl absolute w-full left-0 transition-all duration-300 max-h-[85vh] overflow-y-auto z-40">
+      <div class="px-4 py-6 flex flex-col gap-3 font-semibold text-sm">
+        <a href="index.html" class="block px-4 py-2.5 rounded-lg text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800">HOME</a>
+        
+        <!-- Mobile Dropdown accordion for ABOUT US -->
+        <div>
+          <a href="#" class="mobile-dropdown-trigger flex justify-between items-center px-4 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200">
+            <span>ABOUT US</span>
+            <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+          </a>
+          <div class="hidden border-l-2 border-scoutGreen/20 dark:border-slate-800 ml-6 pl-4 py-1.5 space-y-1 mt-1">
+            <a href="about.html#history" class="block py-1.5 text-xs text-slate-600 dark:text-slate-400 hover:text-scoutGreen transition-colors">Legacy & History</a>
+            <a href="about.html#mission" class="block py-1.5 text-xs text-slate-600 dark:text-slate-400 hover:text-scoutGreen transition-colors">Mission & Vision</a>
+            <a href="about.html#objectives" class="block py-1.5 text-xs text-slate-600 dark:text-slate-400 hover:text-scoutGreen transition-colors">Our Objectives</a>
+            <a href="about.html#leadership" class="block py-1.5 text-xs text-slate-600 dark:text-slate-400 hover:text-scoutGreen transition-colors">Leadership Board</a>
+            <a href="about.html#structure" class="block py-1.5 text-xs text-slate-600 dark:text-slate-400 hover:text-scoutGreen transition-colors">Organization Chart</a>
+          </div>
+        </div>
+
+        <a href="activities.html" class="block px-4 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200">ACTIVITIES</a>
+        <a href="camps-training.html" class="block px-4 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200">CAMPS & TRAINING</a>
+        <a href="gallery.html" class="block px-4 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200">GALLERY</a>
+        <a href="downloads.html" class="block px-4 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200">DOWNLOADS</a>
+        <a href="notices.html" class="block px-4 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200">NOTICES</a>
+        <a href="contact.html" class="block px-4 py-3 rounded-lg text-center bg-scoutGold text-scoutGreen hover:bg-scoutGold-dark transition-all font-bold">CONTACT US</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION WITH CAROUSEL (DOME GRADIENT) -->
+  <section class="relative bg-gradient-to-br from-scoutGreen/5 via-white to-scoutGold/5 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 pt-8 pb-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+      
+      <!-- Left Column: Branding Text -->
+      <div class="lg:col-span-7 space-y-6 text-left">
+        <div class="inline-flex items-center gap-2 bg-scoutGreen/10 text-scoutGreen dark:bg-scoutGreen/20 dark:text-scoutGreen-light px-4 py-1.5 rounded-full font-bold text-xs uppercase tracking-wider">
+          <i class="fa-solid fa-circle-check text-scoutGold"></i> National Youth Development Association
+        </div>
+        <h1 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-scoutGreen dark:text-white leading-tight">
+          Nurturing Leaders. <br>
+          <span class="text-scoutGold-dark dark:text-scoutGold">Building Character.</span> <br>
+          Serving Our Nation.
+        </h1>
+        <p class="text-gray-650 dark:text-slate-300 text-sm md:text-base max-w-xl leading-relaxed">
+          Through organized adventure camps, disaster-relief drills, skill development, and community support, we mold youth into disciplined, responsible national leaders.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="membership.html" class="px-8 py-3.5 rounded-full bg-scoutGreen text-white font-bold text-center text-sm shadow-lg shadow-scoutGreen/20 hover:bg-scoutGreen-light transition-all flex items-center justify-center gap-2 group">
+            <span>REGISTER AS VOLUNTEER</span>
+            <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1"></i>
+          </a>
+          <a href="about.html" class="px-8 py-3.5 rounded-full bg-white text-scoutGreen border-2 border-scoutGreen/20 font-bold text-center text-sm hover:border-scoutGreen dark:bg-slate-900 dark:text-white dark:border-slate-750 transition-all flex items-center justify-center">
+            LEARN MORE
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Hero Image slider -->
+      <div class="lg:col-span-5 relative w-full flex justify-center items-center">
+        <div class="absolute -inset-4 rounded-3xl border-2 border-dashed border-scoutGold/30 dark:border-slate-800 -z-10 rotate-3"></div>
+        <div class="w-full max-w-md h-[300px] sm:h-[380px] md:h-[420px] rounded-3xl overflow-hidden shadow-2xl relative border-4 border-white dark:border-slate-900 bg-slate-100 dark:bg-slate-900">
+          <img src="assets/images/hero-scouts.png" alt="Scouts & Guides" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent flex flex-col justify-end p-6 text-white">
+            <span class="text-xs text-scoutGold font-bold uppercase tracking-widest mb-1">Motto in Action</span>
+            <h4 class="font-bold text-sm sm:text-base">"Duty to Nation, Help to Others, Discipline in Self"</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WELCOME SECTION & CHAIRMAN MESSAGE -->
+  <section class="py-16 md:py-24 bg-white dark:bg-slate-900 transition-colors duration-350">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Secretary message card -->
+      <div class="lg:col-span-5 bg-gradient-to-b from-scoutGreen/5 to-scoutGold/5 dark:from-slate-850 dark:to-slate-800/20 p-6 sm:p-8 rounded-3xl border border-gray-150 dark:border-slate-800 shadow-sm space-y-6 relative overflow-hidden">
+        <div class="absolute -right-8 -bottom-8 text-scoutGreen/5 text-9xl">
+          <i class="fa-solid fa-quote-right"></i>
+        </div>
+        <div class="w-20 h-20 rounded-full bg-scoutGreen/10 border-2 border-scoutGold p-1 overflow-hidden">
+          <div class="w-full h-full rounded-full bg-scoutGreen flex items-center justify-center text-white text-3xl font-extrabold font-display">RS</div>
+        </div>
+        <blockquote class="text-sm md:text-base text-gray-600 dark:text-slate-350 italic leading-relaxed z-10 relative">
+          "Youth are not just the future of our nation, they are active builders of the present. Through scouting and unified volunteering modules, we provide them the character, strength, and skills to construct a resilient India."
+        </blockquote>
+        <div>
+          <h4 class="font-display font-extrabold text-scoutGreen dark:text-white text-base">RAJENDER PRASAD SARASWAT</h4>
+          <p class="text-xs text-scoutGold-dark dark:text-scoutGold font-bold">Secretary, Topdara Ajmer Branch</p>
+        </div>
+      </div>
+
+      <!-- Welcome Content Column -->
+      <div class="lg:col-span-7 space-y-6">
+        <span class="text-scoutGold font-bold text-xs uppercase tracking-widest block">Welcome Message</span>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-scoutGreen dark:text-white">
+          Fostering Discipline, Unity, & Character in Our Youth
+        </h2>
+        
+        <!-- CMS: Home Welcome text -->
+        <div class="text-gray-650 dark:text-slate-300 text-sm md:text-base space-y-4 leading-relaxed" data-cms-field="home_welcome_text">
+          <p>
+            Established as a key regional center of the Bharat Scouts & Guides, Topdara Division Ajmer operates in accordance with national directives to design and run training programs for school-level scouts, girl guides, and community volunteers.
+          </p>
+          <p>
+            Our directives are geared towards promoting physical, mental, and spiritual resilience. Through active drills, leadership certification, and environmental action projects, we connect education with selfless national service.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="about.html" class="px-6 py-2.5 rounded-full bg-scoutGreen text-white text-xs font-bold hover:bg-scoutGreen-light transition-all shadow-md">
+            ABOUT OUR DIRECTIVES
+          </a>
+          <a href="downloads.html" class="px-6 py-2.5 rounded-full border border-gray-200 dark:border-slate-800 text-charcoal dark:text-slate-200 text-xs font-bold hover:bg-gray-50 dark:hover:bg-slate-850 transition-all">
+            ANNUAL REPORTS
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KEY STATS SECTION -->
+  <section class="py-12 bg-scoutGreen dark:bg-slate-900 text-white border-y border-white/5 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center relative z-10">
+      <div class="space-y-1">
+        <div class="text-scoutGold text-4xl font-extrabold" id="stat-members" data-target="5000" data-suffix="+">0</div>
+        <div class="text-xs text-white/70 uppercase tracking-widest font-semibold">Active Members</div>
+      </div>
+      <div class="space-y-1">
+        <div class="text-scoutGold text-4xl font-extrabold" id="stat-camps" data-target="85" data-suffix="+">0</div>
+        <div class="text-xs text-white/70 uppercase tracking-widest font-semibold">Camps Conducted</div>
+      </div>
+      <div class="space-y-1">
+        <div class="text-scoutGold text-4xl font-extrabold" id="stat-projects" data-target="120" data-suffix="+">0</div>
+        <div class="text-xs text-white/70 uppercase tracking-widest font-semibold">Service Projects</div>
+      </div>
+      <div class="space-y-1">
+        <div class="text-scoutGold text-4xl font-extrabold" id="stat-leaders" data-target="450" data-suffix="+">0</div>
+        <div class="text-xs text-white/70 uppercase tracking-widest font-semibold">Certified Leaders</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY ACTIVITIES PREVIEW SECTION -->
+  <section class="py-16 bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-scoutGold font-bold text-xs uppercase tracking-widest block">What We Do</span>
+        <h2 class="font-display font-extrabold text-2xl md:text-3xl text-scoutGreen dark:text-white">OUR CORE OBJECTIVES</h2>
+        <p class="text-gray-500 dark:text-slate-400 text-sm">Empowering volunteers through structured modules to serve the community and build character.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Camping Card -->
+        <div class="bg-white dark:bg-slate-900 border border-gray-150 dark:border-slate-800 rounded-3xl p-6 sm:p-8 hover:-translate-y-2 hover:shadow-xl hover:border-scoutGold/35 transition-all duration-350 group">
+          <div class="w-12 h-12 rounded-2xl bg-scoutGreen/5 dark:bg-slate-800 text-scoutGreen dark:text-scoutGreen-light flex items-center justify-center text-2xl mb-6 group-hover:bg-scoutGreen group-hover:text-white transition-colors duration-300">
+            <i class="fa-solid fa-tent"></i>
+          </div>
+          <h3 class="font-display font-extrabold text-scoutGreen dark:text-white text-lg mb-3">CAMPING & NATURE</h3>
+          <p class="text-gray-650 dark:text-slate-400 text-sm leading-relaxed mb-4">
+            Pitching canvas tents, fire management, wilderness exploration, and safety drills teach scouts resilience and teamwork in nature.
+          </p>
+          <a href="activities.html#camping" class="text-xs font-bold text-scoutGreen hover:text-scoutGold-dark dark:text-scoutGreen-light transition-all flex items-center gap-1">
+            <span>Read Details</span> <i class="fa-solid fa-angle-right"></i>
+          </a>
+        </div>
+
+        <!-- Community Service Card -->
+        <div class="bg-white dark:bg-slate-900 border border-gray-150 dark:border-slate-800 rounded-3xl p-6 sm:p-8 hover:-translate-y-2 hover:shadow-xl hover:border-scoutGold/35 transition-all duration-350 group">
+          <div class="w-12 h-12 rounded-2xl bg-scoutGreen/5 dark:bg-slate-800 text-scoutGreen dark:text-scoutGreen-light flex items-center justify-center text-2xl mb-6 group-hover:bg-scoutGreen group-hover:text-white transition-colors duration-300">
+            <i class="fa-solid fa-handshake-angle"></i>
+          </div>
+          <h3 class="font-display font-extrabold text-scoutGreen dark:text-white text-lg mb-3">SOCIAL COMMUNITY SERVICE</h3>
+          <p class="text-gray-650 dark:text-slate-400 text-sm leading-relaxed mb-4">
+            Taking part in swachhta (cleanliness) rallies, blood donation camps, tree plantations, and emergency traffic management.
+          </p>
+          <a href="activities.html#service" class="text-xs font-bold text-scoutGreen hover:text-scoutGold-dark dark:text-scoutGreen-light transition-all flex items-center gap-1">
+            <span>Read Details</span> <i class="fa-solid fa-angle-right"></i>
+          </a>
+        </div>
+
+        <!-- Leadership training card -->
+        <div class="bg-white dark:bg-slate-900 border border-gray-150 dark:border-slate-800 rounded-3xl p-6 sm:p-8 hover:-translate-y-2 hover:shadow-xl hover:border-scoutGold/35 transition-all duration-350 group">
+          <div class="w-12 h-12 rounded-2xl bg-scoutGreen/5 dark:bg-slate-800 text-scoutGreen dark:text-scoutGreen-light flex items-center justify-center text-2xl mb-6 group-hover:bg-scoutGreen group-hover:text-white transition-colors duration-300">
+            <i class="fa-solid fa-ranking-star"></i>
+          </div>
+          <h3 class="font-display font-extrabold text-scoutGreen dark:text-white text-lg mb-3">LEADERSHIP & DRILLS</h3>
+          <p class="text-gray-650 dark:text-slate-400 text-sm leading-relaxed mb-4">
+            Structured ranks, basic training manuals, semaphore signaling, pioneering lashings, and first-aid certification modules.
+          </p>
+          <a href="activities.html#leadership" class="text-xs font-bold text-scoutGreen hover:text-scoutGold-dark dark:text-scoutGreen-light transition-all flex items-center gap-1">
+            <span>Read Details</span> <i class="fa-solid fa-angle-right"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SPLIT COLUMN: NOTICES & EVENTS -->
+  <section class="py-16 bg-white dark:bg-slate-900 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+      <!-- Notices (7 Cols) -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="flex justify-between items-center border-b border-gray-100 dark:border-slate-800 pb-4">
+          <h3 class="font-display font-extrabold text-xl text-scoutGreen dark:text-white flex items-center gap-2">
+            <span class="w-2.5 h-6 bg-scoutGold rounded-full animate-pulse"></span>
+            LATEST NOTICES & ANNOUNCEMENTS
+          </h3>
+          <a href="notices.html" class="text-xs font-bold text-scoutGreen hover:text-scoutGold dark:text-scoutGreen-light">VIEW ALL</a>
+        </div>
+
+        <div class="space-y-4">
+          
+          <div class="flex gap-4 p-4 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-gray-100 dark:border-slate-850 hover:shadow-md transition-all group">
+            <div class="w-14 h-14 rounded-xl bg-scoutGreen text-white flex flex-col items-center justify-center flex-shrink-0 font-bold dark:bg-slate-900">
+              <span class="text-lg leading-none">18</span>
+              <span class="text-[9px] uppercase mt-1 font-extrabold text-scoutGold">MAY</span>
+            </div>
+            <div>
+              <span class="inline-block text-[10px] text-scoutGreen dark:text-scoutGreen-light font-extrabold uppercase tracking-wide">Camps & Training</span>
+              <h4 class="font-bold text-sm text-charcoal dark:text-white group-hover:text-scoutGreen transition-colors mt-0.5">State Level Leadership camp - 2026 circular</h4>
+              <p class="text-xs text-gray-500 dark:text-slate-400 mt-1">Venue: Ajmer Division HQ camp ground. Basic to Advanced training.</p>
+              <a href="notices.html" class="inline-block text-[11px] text-scoutGreen dark:text-scoutGreen-light font-bold mt-2 hover:underline">Read Full Notice &gt;</a>
+            </div>
+          </div>
+
+          <div class="flex gap-4 p-4 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-gray-100 dark:border-slate-850 hover:shadow-md transition-all group">
+            <div class="w-14 h-14 rounded-xl bg-scoutGreen text-white flex flex-col items-center justify-center flex-shrink-0 font-bold dark:bg-slate-900">
+              <span class="text-lg leading-none">12</span>
+              <span class="text-[9px] uppercase mt-1 font-extrabold text-scoutGold">MAY</span>
+            </div>
+            <div>
+              <span class="inline-block text-[10px] text-scoutGreen dark:text-scoutGreen-light font-extrabold uppercase tracking-wide">Environmental Actions</span>
+              <h4 class="font-bold text-sm text-charcoal dark:text-white group-hover:text-scoutGreen transition-colors mt-0.5">World Environment Day sapling plantation drive</h4>
+              <p class="text-xs text-gray-500 dark:text-slate-400 mt-1">Coordinated tree planting at 15 schools across Topdara Ajmer district.</p>
+              <a href="notices.html" class="inline-block text-[11px] text-scoutGreen dark:text-scoutGreen-light font-bold mt-2 hover:underline">Read Full Notice &gt;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Events (5 Cols) -->
+      <div class="lg:col-span-5 space-y-6">
+        <div class="flex justify-between items-center border-b border-gray-100 dark:border-slate-800 pb-4">
+          <h3 class="font-display font-extrabold text-xl text-scoutGreen dark:text-white flex items-center gap-2">
+            <span class="w-2.5 h-6 bg-scoutGold rounded-full"></span>
+            UPCOMING EVENTS
+          </h3>
+          <a href="events.html" class="text-xs font-bold text-scoutGreen hover:text-scoutGold dark:text-scoutGreen-light">VIEW ALL</a>
+        </div>
+
+        <div class="space-y-4">
+          
+          <div class="p-5 bg-gradient-to-r from-scoutGreen/5 to-transparent dark:from-slate-950 rounded-2xl border border-gray-150 dark:border-slate-800 flex gap-4">
+            <div class="flex-shrink-0 text-center">
+              <span class="block text-2xl font-extrabold text-scoutGreen dark:text-white leading-none">05</span>
+              <span class="block text-[10px] text-gray-400 dark:text-slate-500 uppercase mt-0.5">June 2026</span>
+            </div>
+            <div class="h-10 w-px bg-gray-200 dark:bg-slate-800"></div>
+            <div>
+              <h4 class="font-bold text-sm text-charcoal dark:text-white">World Environment Day Camp</h4>
+              <p class="text-xs text-gray-500 mt-0.5"><i class="fa-solid fa-clock mr-1 text-scoutGold"></i> 07:30 AM | Topdara Circle</p>
+              <p class="text-xs text-gray-500 mt-0.5"><i class="fa-solid fa-location-dot mr-1 text-scoutGold"></i> Division Office HQ</p>
+            </div>
+          </div>
+
+          <div class="p-5 bg-gradient-to-r from-scoutGreen/5 to-transparent dark:from-slate-950 rounded-2xl border border-gray-150 dark:border-slate-800 flex gap-4">
+            <div class="flex-shrink-0 text-center">
+              <span class="block text-2xl font-extrabold text-scoutGreen dark:text-white leading-none">21</span>
+              <span class="block text-[10px] text-gray-400 dark:text-slate-500 uppercase mt-0.5">June 2026</span>
+            </div>
+            <div class="h-10 w-px bg-gray-200 dark:bg-slate-800"></div>
+            <div>
+              <h4 class="font-bold text-sm text-charcoal dark:text-white">International Yoga Day Drill</h4>
+              <p class="text-xs text-gray-500 mt-0.5"><i class="fa-solid fa-clock mr-1 text-scoutGold"></i> 06:00 AM | Parade Ground</p>
+              <p class="text-xs text-gray-500 mt-0.5"><i class="fa-solid fa-location-dot mr-1 text-scoutGold"></i> Ajmer Subdivision HQ</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY PREVIEW & SPONSORS -->
+  <section class="py-16 bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 space-y-12">
+      
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div>
+          <span class="text-scoutGold font-bold text-xs uppercase tracking-widest block">Visuals</span>
+          <h2 class="font-display font-extrabold text-2xl text-scoutGreen dark:text-white">GALLERY SNAPSHOTS</h2>
+        </div>
+        <a href="gallery.html" class="px-5 py-2.5 bg-scoutGreen text-white text-xs font-bold rounded-full hover:bg-scoutGreen-light transition-all shadow-md">VIEW ALL PORTFOLIO</a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="h-48 rounded-2xl overflow-hidden border border-gray-100 dark:border-slate-800 shadow-sm relative group cursor-pointer" onclick="location.href='gallery.html'">
+          <img src="assets/images/camping.png" alt="Camps thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-350">
+          <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <i class="fa-solid fa-expand text-white text-lg"></i>
+          </div>
+        </div>
+        <div class="h-48 rounded-2xl overflow-hidden border border-gray-100 dark:border-slate-800 shadow-sm relative group cursor-pointer" onclick="location.href='gallery.html'">
+          <img src="assets/images/adventure.png" alt="Adventure thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-350">
+          <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <i class="fa-solid fa-expand text-white text-lg"></i>
+          </div>
+        </div>
+        <div class="h-48 rounded-2xl overflow-hidden border border-gray-100 dark:border-slate-800 shadow-sm relative group cursor-pointer" onclick="location.href='gallery.html'">
+          <img src="assets/images/hero-scouts.png" alt="Drills thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-350">
+          <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <i class="fa-solid fa-expand text-white text-lg"></i>
+          </div>
+        </div>
+        <div class="h-48 rounded-2xl overflow-hidden bg-scoutGreen flex flex-col items-center justify-center text-white p-4 text-center cursor-pointer hover:bg-scoutGreen-light transition-colors" onclick="location.href='gallery.html'">
+          <i class="fa-solid fa-video text-3xl text-scoutGold mb-3"></i>
+          <span class="font-bold text-sm uppercase tracking-wide">Video Albums</span>
+          <p class="text-[11px] text-white/70 mt-1">Watch live drills and camp documentaries.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NEWSLETTER BLOCK & FOOTER -->
+  <!-- TEMPLATE PARTIAL: partials/footer.blade.php -->
+  <footer class="bg-scoutGreen text-white/90 pt-16 pb-8 dark:bg-slate-900 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      
+      <!-- Newsletter Row -->
+      <div class="bg-scoutGreen-dark dark:bg-slate-950 rounded-3xl p-8 md:p-12 border border-white/5 flex flex-col lg:flex-row justify-between items-center gap-8 mb-16 shadow-xl">
+        <div class="space-y-2 text-center lg:text-left">
+          <h3 class="font-display font-extrabold text-2xl text-white">Subscribe to Circular Updates</h3>
+          <p class="text-sm text-white/70 max-w-md">Get instant emails about new notices, camps schedules, and training circulars released by the office.</p>
+        </div>
+        <form id="news-form" data-action-name="Newsletter Subscription" class="w-full lg:w-auto flex flex-col sm:flex-row gap-3">
+          <input type="email" id="news-email" placeholder="Enter your email address" required class="px-5 py-3 rounded-full text-charcoal text-sm outline-none w-full sm:w-80 border-2 border-transparent focus:border-scoutGold">
+          <button type="submit" class="px-8 py-3 rounded-full bg-scoutGold text-scoutGreen font-bold text-sm tracking-wide hover:bg-scoutGold-light transition-all flex-shrink-0">
+            SUBSCRIBE
+          </button>
+        </form>
+      </div>
+
+      <!-- Main Footer Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-white/10">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="space-y-6">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-white rounded-full p-0.5 overflow-hidden flex-shrink-0">
+              <img src="assets/logo.jpg" alt="Logo" class="w-full h-full object-contain">
+            </div>
+            <div>
+              <span class="block font-display font-extrabold text-sm text-white">RAJASTHAN STATE</span>
+              <span class="block font-display font-extrabold text-xs text-white/80">BHARAT SCOUTS & GUIDES</span>
+              <span class="block text-[10px] text-scoutGold font-bold tracking-widest uppercase">Topdara, Ajmer</span>
+            </div>
+          </div>
+          <p class="text-xs text-white/60 leading-relaxed">
+            Formally organized to building physical resilience, character discipline, and active community volunteer strength among youth.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="space-y-5">
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider border-l-2 border-scoutGold pl-3">Site Links</h4>
+          <ul class="text-xs space-y-3 text-white/70">
+            <li><a href="index.html" class="hover:text-scoutGold transition-colors">&gt; Home</a></li>
+            <li><a href="about.html" class="hover:text-scoutGold transition-colors">&gt; About Us</a></li>
+            <li><a href="activities.html" class="hover:text-scoutGold transition-colors">&gt; Core Activities</a></li>
+            <li><a href="gallery.html" class="hover:text-scoutGold transition-colors">&gt; Photo & Video Gallery</a></li>
+            <li><a href="membership.html" class="hover:text-scoutGold transition-colors">&gt; Membership Dashboard</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Important Resources -->
+        <div class="space-y-5">
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider border-l-2 border-scoutGold pl-3">Resources</h4>
+          <ul class="text-xs space-y-3 text-white/70">
+            <li><a href="downloads.html" class="hover:text-scoutGold transition-colors">&gt; Circulars Table</a></li>
+            <li><a href="downloads.html" class="hover:text-scoutGold transition-colors">&gt; PDF Guidelines</a></li>
+            <li><a href="notices.html" class="hover:text-scoutGold transition-colors">&gt; Notices Board</a></li>
+            <li><a href="camps-training.html" class="hover:text-scoutGold transition-colors">&gt; Camp Schedules</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Connect Details -->
+        <div class="space-y-5">
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider border-l-2 border-scoutGold pl-3">Connect With Us</h4>
+          <div class="text-xs space-y-3 text-white/75">
+            <span class="flex items-start gap-2">
+              <i class="fa-solid fa-map-location-dot text-scoutGold mt-0.5"></i>
+              <span>Scouts & Guides Office, Topdhara Rd, Vinay Nagar, Pal Bhichala, Ajmer, Rajasthan 305001</span>
+            </span>
+            <a href="tel:+918233327929" class="flex items-center gap-2 hover:text-scoutGold transition-colors">
+              <i class="fa-solid fa-phone text-scoutGold"></i>
+              <span>+91 8233327929</span>
+            </a>
+            <a href="mailto:topdarascoutandguides@gmail.com" class="flex items-center gap-2 hover:text-scoutGold transition-colors">
+              <i class="fa-solid fa-envelope text-scoutGold"></i>
+              <span>topdarascoutandguides@gmail.com</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/55">
+        <div>
+          &copy; 2026 Rajasthan State Bharat Scouts & Guides, Ajmer Division. All Rights Reserved.
+        </div>
+        <div class="flex items-center gap-1.5">
+          Designed with <i class="fa-solid fa-heart text-red-500 animate-pulse"></i> for Scouting.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- HEADER SEARCH OVERLAY MODAL -->
+  <div id="search-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
+    <button id="close-search" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-xl transition-all focus:outline-none" aria-label="Close Search">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="w-full max-w-2xl bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-2xl space-y-4">
+      <h3 class="font-display font-extrabold text-xl text-scoutGreen dark:text-white flex items-center gap-2">
+        <i class="fa-solid fa-magnifying-glass text-scoutGold"></i> Search Portal Content
+      </h3>
+      <form class="flex gap-2">
+        <input type="text" placeholder="Search for circulars, notices, camps, activities..." required class="w-full px-5 py-3 rounded-xl border border-gray-250 dark:border-slate-800 dark:bg-slate-950 dark:text-white outline-none focus:ring-2 focus:ring-scoutGreen/10">
+        <button type="submit" class="px-6 py-3 rounded-xl bg-scoutGreen text-white font-bold hover:bg-scoutGreen-light transition-all">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FLOATING STICKY BUTTONS -->
+  <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-40">
+    <!-- WhatsApp Floating Btn -->
+    <a href="https://wa.me/918233327929" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-green-500 hover:bg-green-600 text-white flex items-center justify-center shadow-lg transition-transform hover:scale-110" aria-label="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+    
+    <!-- Call Now Floating Btn -->
+    <a href="tel:+918233327929" class="w-12 h-12 rounded-full bg-scoutGold hover:bg-scoutGold-light text-white flex items-center justify-center shadow-lg transition-transform hover:scale-110" aria-label="Call Now">
+      <i class="fa-solid fa-phone text-lg"></i>
+    </a>
+
+    <!-- Back To Top Button -->
+    <button id="back-to-top" class="w-12 h-12 rounded-full bg-scoutGreen hover:bg-scoutGreen-light text-white flex items-center justify-center shadow-lg transition-all duration-300 translate-y-20 opacity-0 focus:outline-none" aria-label="Back to Top">
+      <i class="fa-solid fa-arrow-up text-lg"></i>
+    </button>
+  </div>
+
+  <!-- FLOATING TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-6 right-6 bg-scoutGreen text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3 z-50 transform translate-y-20 opacity-0 transition-all duration-300">
+    <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-scoutGold">
+      <i class="fa-solid fa-circle-check"></i>
+    </div>
+    <div>
+      <span class="block font-bold text-sm" id="toast-title">Notification</span>
+      <span class="block text-xs text-white/80" id="toast-desc">Message placeholder text</span>
+    </div>
+  </div>
+
+  <!-- Link Common Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>

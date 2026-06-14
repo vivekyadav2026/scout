@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery Portal - Government & Youth Development Organization</title>
+  <meta name="description" content="View photo albums and video records of camp assemblies, survival training, and community service activities.">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            scoutGreen: {
+              DEFAULT: '#0b5327',
+              light: '#0e6931',
+              dark: '#073519',
+              lightest: '#f0fdf4'
+            },
+            scoutGold: {
+              DEFAULT: '#f0a500',
+              light: '#ffbf35',
+              dark: '#c78900',
+              lightest: '#fffbeb'
+            },
+            charcoal: '#1F2937',
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    .dark ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #0b5327; border-radius: 4px; }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .dark .glass-nav {
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-slide-down {
+      animation: slideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    /* Slide underline hover effect */
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; /* Tighter layout padding */
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #F4B400; /* Scout Gold */
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    .nav-link-active::after {
+      width: 100% !important;
+    }
+  </style>
+</head>
+<body class="font-sans text-charcoal bg-[#F8FAFC] dark:bg-slate-950 dark:text-slate-100 overflow-x-hidden transition-colors duration-300">
+
+                <!-- TOP UTILITY HEADER -->
+  <div class="hidden sm:flex bg-scoutGreen text-white text-[11px] py-1.5 px-4 md:px-8 justify-between items-center border-b border-white/10 z-50 relative dark:bg-slate-900 transition-colors">
+    <div class="flex items-center gap-6">
+      <span class="flex items-center gap-1.5">
+        <i class="fa-solid fa-location-dot text-scoutGold"></i>
+        <span class="font-medium">Scouts & Guides Office, Topdhara Rd, Vinay Nagar, Pal Bhichala, Ajmer, Rajasthan 305001</span>
+      </span>
+      <span class="h-3 w-px bg-white/25"></span>
+      <a href="tel:+918233327929" class="flex items-center gap-1.5 hover:text-scoutGold transition-colors">
+        <i class="fa-solid fa-phone text-scoutGold"></i>
+        <span class="font-medium">8233327929</span>
+      </a>
+    </div>
+    <div class="flex items-center gap-4">
+      <span class="text-white/60 hidden md:inline">National Youth Portal</span>
+      <div class="flex items-center gap-3">
+        <span class="text-white/80">Follow Us :</span>
+        <a href="#" class="w-6 h-6 rounded-full bg-white/10 hover:bg-scoutGold flex items-center justify-center text-white transition-all duration-300" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f text-[10px]"></i>
+        </a>
+        <a href="#" class="w-6 h-6 rounded-full bg-white/10 hover:bg-scoutGold flex items-center justify-center text-white transition-all duration-300" aria-label="Instagram">
+          <i class="fa-brands fa-instagram text-[10px]"></i>
+        </a>
+        <a href="#" class="w-6 h-6 rounded-full bg-white/10 hover:bg-scoutGold flex items-center justify-center text-white transition-all duration-300" aria-label="YouTube">
+          <i class="fa-brands fa-youtube text-[10px]"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION HEADER -->
+  <header class="glass-nav sticky top-0 z-40 transition-all duration-300 shadow-sm border-b border-slate-100 dark:border-slate-800/80 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 py-3 flex justify-between items-center transition-all duration-300" id="navbar-container">
+      
+      <!-- Brand Logo + Hierarchical Name -->
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <!-- Compact Logo container -->
+        <div class="w-11 h-11 md:w-12 md:h-12 flex-shrink-0 bg-white dark:bg-slate-950 p-0.5 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800/80 shadow-md transition-all duration-300 group-hover:scale-105" id="brand-logo-container">
+          <img src="assets/logo.png" alt="Bharat Scouts & Guides Logo" class="w-full h-full object-contain">
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[8px] md:text-[9px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 leading-none whitespace-nowrap">
+            RAJASTHAN STATE
+          </span>
+          <span class="font-display font-extrabold text-[12px] md:text-sm lg:text-base tracking-tight text-scoutGreen dark:text-white mt-0.5 mb-0.5 leading-none whitespace-nowrap">
+            BHARAT SCOUTS & GUIDES
+          </span>
+          <div class="flex items-center gap-1.5 mt-0.5 whitespace-nowrap">
+            <span class="h-[1.5px] w-6 bg-[#ff9933]"></span>
+            <span class="font-sans font-bold text-[8px] md:text-[9px] text-charcoal dark:text-white tracking-widest leading-none">TOPDARA, AJMER</span>
+            <span class="h-[1.5px] w-6 bg-[#138808]"></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden xl:flex items-center gap-4 2xl:gap-6 font-semibold text-[12px] 2xl:text-sm text-slate-800 dark:text-slate-200" id="desktop-nav-menu">
+        
+        <a href="index.html" class="nav-link hover:text-scoutGreen dark:hover:text-white transition-colors py-2 whitespace-nowrap">HOME</a>
+        
+        <!-- ABOUT US Mega Menu Trigger -->
+        <div class="relative group py-2 whitespace-nowrap">
+          <a href="about.html" class="nav-link hover:text-scoutGreen dark:hover:text-white transition-colors flex items-center gap-1 hover:text-scoutGreen dark:hover:text-white transition-colors whitespace-nowrap">
+            ABOUT US <i class="fa-solid fa-chevron-down text-[8px] transition-transform group-hover:rotate-180"></i>
+          </a>
+          
+          <!-- MEGA MENU OVERLAY CARD -->
+          <div class="absolute left-1/2 -translate-x-1/2 mt-4 w-[680px] rounded-3xl bg-white dark:bg-slate-900 shadow-2xl border border-slate-100 dark:border-slate-850 p-8 hidden group-hover:grid grid-cols-3 gap-8 animate-fade-in z-50">
+            <!-- Col 1: Foundation -->
+            <div class="space-y-4 text-left">
+              <h4 class="text-xs font-extrabold uppercase tracking-wider text-scoutGreen dark:text-scoutGreen-light">Our Foundation</h4>
+              <ul class="space-y-3 text-xs">
+                <li>
+                  <a href="about.html#history" class="group/item flex items-start gap-2.5 hover:text-scoutGreen dark:hover:text-white transition-colors">
+                    <i class="fa-solid fa-timeline text-scoutGold mt-0.5"></i>
+                    <div>
+                      <span class="block font-bold">Legacy & History</span>
+                      <span class="block text-[10px] text-slate-450 font-medium">Scouting since 1909</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="about.html#mission" class="group/item flex items-start gap-2.5 hover:text-scoutGreen dark:hover:text-white transition-colors">
+                    <i class="fa-solid fa-flag text-scoutGold mt-0.5"></i>
+                    <div>
+                      <span class="block font-bold">Mission & Vision</span>
+                      <span class="block text-[10px] text-slate-450 font-medium">Core ideals and values</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="about.html#objectives" class="group/item flex items-start gap-2.5 hover:text-scoutGreen dark:hover:text-white transition-colors">
+                    <i class="fa-solid fa-bullseye text-scoutGold mt-0.5"></i>
+                    <div>
+                      <span class="block font-bold">Our Objectives</span>
+                      <span class="block text-[10px] text-slate-450 font-medium">Patrol directives</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <!-- Col 2: Administration -->
+            <div class="space-y-4 text-left">
+              <h4 class="text-xs font-extrabold uppercase tracking-wider text-scoutGreen dark:text-scoutGreen-light">Governance</h4>
+              <ul class="space-y-3 text-xs">
+                <li>
+                  <a href="about.html#leadership" class="group/item flex items-start gap-2.5 hover:text-scoutGreen dark:hover:text-white transition-colors">
+                    <i class="fa-solid fa-user-shield text-scoutGold mt-0.5"></i>
+                    <div>
+                      <span class="block font-bold">Leadership Board</span>
+                      <span class="block text-[10px] text-slate-455 font-medium">Secretary & Joint Sec</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="about.html#structure" class="group/item flex items-start gap-2.5 hover:text-scoutGreen dark:hover:text-white transition-colors">
+                    <i class="fa-solid fa-sitemap text-scoutGold mt-0.5"></i>
+                    <div>
+                      <span class="block font-bold">Division Chart</span>
+                      <span class="block text-[10px] text-slate-455 font-medium">Organizational tree</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Col 3: Focus Spotlight -->
+            <div class="bg-slate-50 dark:bg-slate-950 p-5 rounded-2xl border border-slate-100 dark:border-slate-850 flex flex-col justify-between text-left">
+              <div class="space-y-2">
+                <span class="text-[9px] bg-scoutGold/20 text-scoutGold-dark dark:text-scoutGold px-2 py-0.5 rounded font-extrabold">DIVISION HQ</span>
+                <h5 class="font-bold text-xs text-slate-800 dark:text-white">Rajender Prasad Saraswat</h5>
+                <p class="text-[10px] text-slate-500 leading-relaxed">Secretary Topdara division Ajmer.</p>
+              </div>
+              <a href="contact.html" class="block text-center py-2 bg-scoutGreen text-white text-[10px] font-bold rounded-lg hover:bg-scoutGreen-light transition-all mt-4">Contact Office</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="activities.html" class="nav-link hover:text-scoutGreen dark:hover:text-white transition-colors py-2 whitespace-nowrap">ACTIVITIES</a>
+        <a href="camps-training.html" class="nav-link hover:text-scoutGreen dark:hover:text-white transition-colors py-2 whitespace-nowrap">CAMPS & TRAINING</a>
+        <a href="gallery.html" class="nav-link nav-link-active text-scoutGreen dark:text-white after:w-full py-2 whitespace-nowrap">GALLERY</a>
+        <a href="downloads.html" class="nav-link hover:text-scoutGreen dark:hover:text-white transition-colors py-2 whitespace-nowrap">DOWNLOADS</a>
+        <a href="notices.html" class="nav-link hover:text-scoutGreen dark:hover:text-white transition-colors py-2 whitespace-nowrap">NOTICES</a>
+        
+        <!-- Premium CTA Button -->
+        <a href="contact.html" class="px-4 py-2 rounded-full border border-scoutGreen text-scoutGreen dark:border-white/20 dark:text-white font-bold hover:bg-scoutGreen hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-all duration-300 shadow-sm whitespace-nowrap ">
+          CONTACT US
+        </a>
+
+        <!-- Extra Tools -->
+        <div class="h-5 w-px bg-slate-200 dark:bg-slate-800 mx-1"></div>
+        
+        <button id="search-toggle" class="p-2 text-slate-700 hover:text-scoutGreen dark:text-slate-355 dark:hover:text-white focus:outline-none" aria-label="Open Search">
+          <i class="fa-solid fa-magnifying-glass text-base"></i>
+        </button>
+
+        <button id="dark-theme-toggle" class="p-2 text-slate-700 hover:text-scoutGreen dark:text-slate-355 dark:hover:text-white focus:outline-none" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon text-base"></i>
+        </button>
+      </nav>
+
+      <!-- Mobile Navbar Trigger -->
+      <div class="flex xl:hidden items-center gap-2">
+        <button onclick="document.getElementById('search-toggle').click()" class="p-2 text-slate-700 dark:text-slate-355 focus:outline-none">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button onclick="document.getElementById('dark-theme-toggle').click()" class="p-2 text-slate-700 dark:text-slate-355 focus:outline-none">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button id="menu-btn" class="p-2 rounded-md hover:bg-slate-50 dark:hover:bg-slate-800 text-scoutGreen dark:text-slate-200 focus:outline-none">
+          <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-850 shadow-xl absolute w-full left-0 transition-all duration-300 max-h-[85vh] overflow-y-auto z-40">
+      <div class="px-4 py-6 flex flex-col gap-3 font-semibold text-sm">
+        <a href="index.html" class="block px-4 py-2.5 rounded-lg text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800">HOME</a>
+        
+        <!-- Mobile Dropdown accordion for ABOUT US -->
+        <div>
+          <a href="#" class="mobile-dropdown-trigger flex justify-between items-center px-4 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200">
+            <span>ABOUT US</span>
+            <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+          </a>
+          <div class="hidden border-l-2 border-scoutGreen/20 dark:border-slate-800 ml-6 pl-4 py-1.5 space-y-1 mt-1">
+            <a href="about.html#history" class="block py-1.5 text-xs text-slate-600 dark:text-slate-400 hover:text-scoutGreen transition-colors">Legacy & History</a>
+            <a href="about.html#mission" class="block py-1.5 text-xs text-slate-600 dark:text-slate-400 hover:text-scoutGreen transition-colors">Mission & Vision</a>
+            <a href="about.html#objectives" class="block py-1.5 text-xs text-slate-600 dark:text-slate-400 hover:text-scoutGreen transition-colors">Our Objectives</a>
+            <a href="about.html#leadership" class="block py-1.5 text-xs text-slate-600 dark:text-slate-400 hover:text-scoutGreen transition-colors">Leadership Board</a>
+            <a href="about.html#structure" class="block py-1.5 text-xs text-slate-600 dark:text-slate-400 hover:text-scoutGreen transition-colors">Organization Chart</a>
+          </div>
+        </div>
+
+        <a href="activities.html" class="block px-4 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200">ACTIVITIES</a>
+        <a href="camps-training.html" class="block px-4 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200">CAMPS & TRAINING</a>
+        <a href="gallery.html" class="block px-4 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200">GALLERY</a>
+        <a href="downloads.html" class="block px-4 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200">DOWNLOADS</a>
+        <a href="notices.html" class="block px-4 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200">NOTICES</a>
+        <a href="contact.html" class="block px-4 py-3 rounded-lg text-center bg-scoutGold text-scoutGreen hover:bg-scoutGold-dark transition-all font-bold">CONTACT US</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB HEADER -->
+  <div class="bg-gradient-to-r from-scoutGreen to-scoutGreen/90 text-white py-12 dark:from-slate-900 dark:to-slate-950">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 text-center space-y-2">
+      <h1 class="font-display font-extrabold text-3xl md:text-4xl text-white">PHOTO & VIDEO ALBUMS</h1>
+      <div class="flex justify-center items-center gap-2 text-xs text-white/75 font-semibold">
+        <a href="index.html" class="hover:text-scoutGold">HOME</a>
+        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+        <span class="text-white">GALLERY</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GALLERY GRID SECTION -->
+  <section class="py-16 bg-white dark:bg-slate-900 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 space-y-12">
+      
+      <!-- Tabs header -->
+      <div class="flex justify-center items-center border-b border-gray-150 dark:border-slate-800 pb-6">
+        <div class="flex flex-wrap gap-2">
+          <button class="gallery-tab px-5 py-2 bg-scoutGreen text-white text-xs font-bold rounded-full shadow" onclick="filterGallery('all')">ALL PHOTOS</button>
+          <button class="gallery-tab px-5 py-2 bg-white dark:bg-slate-800 text-gray-500 border border-gray-150 dark:border-slate-800 text-xs font-bold rounded-full hover:bg-gray-50" onclick="filterGallery('camps')">CAMPS</button>
+          <button class="gallery-tab px-5 py-2 bg-white dark:bg-slate-800 text-gray-500 border border-gray-150 dark:border-slate-800 text-xs font-bold rounded-full hover:bg-gray-50" onclick="filterGallery('activities')">ACTIVITIES</button>
+          <button class="gallery-tab px-5 py-2 bg-white dark:bg-slate-800 text-gray-500 border border-gray-150 dark:border-slate-800 text-xs font-bold rounded-full hover:bg-gray-50" onclick="filterGallery('drills')">DRILLS</button>
+        </div>
+      </div>
+
+      <!-- Masonry Flex Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="gallery-container">
+        
+        <div class="gallery-grid-item gallery-item rounded-3xl overflow-hidden shadow-sm h-40 sm:h-56 md:h-64 border border-gray-100 dark:border-slate-800 cursor-pointer relative group" data-category="camps" data-title="Canvas pitching Ajmer camp" data-desc="Scout troops working together in team formations.">
+          <img src="assets/images/camping.png" alt="Scouts camping" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-350">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+            <span class="text-[10px] text-scoutGold font-bold uppercase tracking-wider">Camps</span>
+            <h4 class="font-bold text-sm">Canvas Camp Pitching</h4>
+          </div>
+        </div>
+
+        <div class="gallery-grid-item gallery-item rounded-3xl overflow-hidden shadow-sm h-40 sm:h-56 md:h-64 border border-gray-100 dark:border-slate-800 cursor-pointer relative group" data-category="activities" data-title="Aravali Hills Trekking" data-desc="Outdoor exploration programs in Pushkar fringes.">
+          <img src="assets/images/adventure.png" alt="Adventure hike" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-350">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+            <span class="text-[10px] text-scoutGold font-bold uppercase tracking-wider">Activities</span>
+            <h4 class="font-bold text-sm">Hills Adventure Trek</h4>
+          </div>
+        </div>
+
+        <div class="gallery-grid-item gallery-item rounded-3xl overflow-hidden shadow-sm h-40 sm:h-56 md:h-64 border border-gray-100 dark:border-slate-800 cursor-pointer relative group" data-category="drills" data-title="Uniform Saluting Drill matches" data-desc="Volunteers practicing marching formations.">
+          <img src="assets/images/hero-scouts.png" alt="Scouts drill" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-350">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+            <span class="text-[10px] text-scoutGold font-bold uppercase tracking-wider">Drills</span>
+            <h4 class="font-bold text-sm">Uniform Saluting Drills</h4>
+          </div>
+        </div>
+
+        <div class="gallery-grid-item gallery-item rounded-3xl overflow-hidden shadow-sm h-40 sm:h-56 md:h-64 border border-gray-100 dark:border-slate-800 cursor-pointer relative group" data-category="camps" data-title="Campfire Evening Circle" data-desc="Troops gather around the campfire for evening drills and songs.">
+          <img src="assets/images/campfire.png" alt="Campfire evening" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-350">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+            <span class="text-[10px] text-scoutGold font-bold uppercase tracking-wider">Camps</span>
+            <h4 class="font-bold text-sm">Campfire Evening Circle</h4>
+          </div>
+        </div>
+
+        <div class="gallery-grid-item gallery-item rounded-3xl overflow-hidden shadow-sm h-40 sm:h-56 md:h-64 border border-gray-100 dark:border-slate-800 cursor-pointer relative group" data-category="drills" data-title="First Aid Rescue Drill" data-desc="Scouts practice mock casualty transport and bandaging techniques.">
+          <img src="assets/images/drill_rescue.png" alt="First aid rescue drill" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-350">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+            <span class="text-[10px] text-scoutGold font-bold uppercase tracking-wider">Drills</span>
+            <h4 class="font-bold text-sm">First Aid Rescue Drill</h4>
+          </div>
+        </div>
+
+        <div class="gallery-grid-item gallery-item rounded-3xl overflow-hidden shadow-sm h-40 sm:h-56 md:h-64 border border-gray-100 dark:border-slate-800 cursor-pointer relative group" data-category="activities" data-title="Bamboo Pioneering Bridge" data-desc="Building structures using lashing knots and bamboo poles.">
+          <img src="assets/images/pioneering.png" alt="Pioneering bridge construction" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-350">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+            <span class="text-[10px] text-scoutGold font-bold uppercase tracking-wider">Activities</span>
+            <h4 class="font-bold text-sm">Bamboo Pioneering</h4>
+          </div>
+        </div>
+
+        <div class="gallery-grid-item gallery-item rounded-3xl overflow-hidden shadow-sm h-40 sm:h-56 md:h-64 border border-gray-100 dark:border-slate-800 cursor-pointer relative group" data-category="activities" data-title="Tree sapling plantation drive" data-desc="Scouts planting new tree saplings for environmental conservation.">
+          <img src="assets/images/sapling_planting.png" alt="Tree planting drive" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-350">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+            <span class="text-[10px] text-scoutGold font-bold uppercase tracking-wider">Activities</span>
+            <h4 class="font-bold text-sm">Tree Plantation Drive</h4>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MOCK LIGHTBOX FOR GALLERY -->
+  <div id="gallery-lightbox" class="fixed inset-0 bg-black/95 z-50 flex flex-col items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
+    <button onclick="closeGalleryLightbox()" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-xl focus:outline-none">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="relative w-full max-w-4xl h-[70vh] flex items-center justify-center">
+      <button onclick="changeGalleryLightboxSlide(-1)" class="absolute left-2 w-12 h-12 rounded-full bg-white/5 hover:bg-white/10 text-white flex items-center justify-center"><i class="fa-solid fa-chevron-left"></i></button>
+      <img id="g-lightbox-img" src="" alt="Lightbox image" class="max-w-full max-h-full object-contain rounded-lg">
+      <button onclick="changeGalleryLightboxSlide(1)" class="absolute right-2 w-12 h-12 rounded-full bg-white/5 hover:bg-white/10 text-white flex items-center justify-center"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="text-center mt-6 text-white space-y-1">
+      <h3 id="g-lightbox-title" class="font-bold text-lg">Image Title</h3>
+      <p id="g-lightbox-desc" class="text-xs text-white/60">Image descriptions.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-scoutGreen text-white/90 pt-16 pb-8 dark:bg-slate-900 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      
+      <div class="bg-scoutGreen-dark dark:bg-slate-950 rounded-3xl p-8 md:p-12 border border-white/5 flex flex-col lg:flex-row justify-between items-center gap-8 mb-16 shadow-xl">
+        <div class="space-y-2 text-center lg:text-left">
+          <h3 class="font-display font-extrabold text-2xl text-white">Subscribe to Our Newsletter</h3>
+          <p class="text-sm text-white/70 max-w-md">Get instant emails about new notices, camps schedules, and training circulars released by the office.</p>
+        </div>
+        <form id="news-form" data-action-name="Newsletter Subscription" class="w-full lg:w-auto flex flex-col sm:flex-row gap-3">
+          <input type="email" id="news-email" placeholder="Enter your email address" required class="px-5 py-3 rounded-full text-charcoal text-sm outline-none w-full sm:w-80 border-2 border-transparent focus:border-scoutGold">
+          <button type="submit" class="px-8 py-3 rounded-full bg-scoutGold text-scoutGreen font-bold text-sm tracking-wide hover:bg-scoutGold-light transition-all flex-shrink-0">
+            SUBSCRIBE
+          </button>
+        </form>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-white/10">
+        
+        <div class="space-y-6">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-white rounded-full p-0.5 overflow-hidden flex-shrink-0">
+              <img src="assets/logo.jpg" alt="Logo" class="w-full h-full object-contain">
+            </div>
+            <div>
+              <span class="block font-display font-extrabold text-sm text-white">RAJASTHAN STATE</span>
+              <span class="block font-display font-extrabold text-xs text-white/80">BHARAT SCOUTS & GUIDES</span>
+              <span class="block text-[10px] text-scoutGold font-bold tracking-widest uppercase">Topdara, Ajmer</span>
+            </div>
+          </div>
+          <p class="text-xs text-white/60 leading-relaxed">
+            Formally organized to building physical resilience, character discipline, and active community volunteer strength among youth.
+          </p>
+        </div>
+
+        <div class="space-y-5">
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider border-l-2 border-scoutGold pl-3">Site Links</h4>
+          <ul class="text-xs space-y-3 text-white/70">
+            <li><a href="index.html" class="hover:text-scoutGold transition-colors">&gt; Home</a></li>
+            <li><a href="about.html" class="hover:text-scoutGold transition-colors">&gt; About Us</a></li>
+            <li><a href="activities.html" class="hover:text-scoutGold transition-colors">&gt; Core Activities</a></li>
+            <li><a href="gallery.html" class="hover:text-scoutGold transition-colors">&gt; Photo & Video Gallery</a></li>
+            <li><a href="membership.html" class="hover:text-scoutGold transition-colors">&gt; Membership Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-5">
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider border-l-2 border-scoutGold pl-3">Resources</h4>
+          <ul class="text-xs space-y-3 text-white/70">
+            <li><a href="downloads.html" class="hover:text-scoutGold transition-colors">&gt; Circulars Table</a></li>
+            <li><a href="downloads.html" class="hover:text-scoutGold transition-colors">&gt; PDF Guidelines</a></li>
+            <li><a href="notices.html" class="hover:text-scoutGold transition-colors">&gt; Notices Board</a></li>
+            <li><a href="camps-training.html" class="hover:text-scoutGold transition-colors">&gt; Camp Schedules</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-5">
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider border-l-2 border-scoutGold pl-3">Connect With Us</h4>
+          <div class="text-xs space-y-3 text-white/75">
+            <span class="flex items-start gap-2">
+              <i class="fa-solid fa-map-location-dot text-scoutGold mt-0.5"></i>
+              <span>Scouts & Guides Office, Topdhara Rd, Vinay Nagar, Pal Bhichala, Ajmer, Rajasthan 305001</span>
+            </span>
+            <a href="tel:+918233327929" class="flex items-center gap-2 hover:text-scoutGold transition-colors">
+              <i class="fa-solid fa-phone text-scoutGold"></i>
+              <span>+91 8233327929</span>
+            </a>
+            <a href="mailto:topdarascoutandguides@gmail.com" class="flex items-center gap-2 hover:text-scoutGold transition-colors">
+              <i class="fa-solid fa-envelope text-scoutGold"></i>
+              <span>topdarascoutandguides@gmail.com</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/55">
+        <div>
+          &copy; 2026 Rajasthan State Bharat Scouts & Guides, Ajmer Division. All Rights Reserved.
+        </div>
+        <div class="flex items-center gap-1.5">
+          Designed with <i class="fa-solid fa-heart text-red-500 animate-pulse"></i> for Scouting.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- HEADER SEARCH OVERLAY MODAL -->
+  <div id="search-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
+    <button id="close-search" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-xl transition-all focus:outline-none" aria-label="Close Search">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="w-full max-w-2xl bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-2xl space-y-4">
+      <h3 class="font-display font-extrabold text-xl text-scoutGreen dark:text-white flex items-center gap-2">
+        <i class="fa-solid fa-magnifying-glass text-scoutGold"></i> Search Portal Content
+      </h3>
+      <form class="flex gap-2">
+        <input type="text" placeholder="Search for circulars, notices, camps, activities..." required class="w-full px-5 py-3 rounded-xl border border-gray-250 dark:border-slate-800 dark:bg-slate-950 dark:text-white outline-none focus:ring-2 focus:ring-scoutGreen/10">
+        <button type="submit" class="px-6 py-3 rounded-xl bg-scoutGreen text-white font-bold hover:bg-scoutGreen-light transition-all">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FLOATING STICKY BUTTONS -->
+  <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-40">
+    <a href="https://wa.me/918233327929" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-green-500 hover:bg-green-600 text-white flex items-center justify-center shadow-lg transition-transform hover:scale-110" aria-label="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+    <a href="tel:+918233327929" class="w-12 h-12 rounded-full bg-scoutGold hover:bg-scoutGold-light text-white flex items-center justify-center shadow-lg transition-transform hover:scale-110" aria-label="Call Now">
+      <i class="fa-solid fa-phone text-lg"></i>
+    </a>
+    <button id="back-to-top" class="w-12 h-12 rounded-full bg-scoutGreen hover:bg-scoutGreen-light text-white flex items-center justify-center shadow-lg transition-all duration-300 translate-y-20 opacity-0 focus:outline-none" aria-label="Back to Top">
+      <i class="fa-solid fa-arrow-up text-lg"></i>
+    </button>
+  </div>
+
+  <!-- FLOATING TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-6 right-6 bg-scoutGreen text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3 z-50 transform translate-y-20 opacity-0 transition-all duration-300">
+    <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-scoutGold">
+      <i class="fa-solid fa-circle-check"></i>
+    </div>
+    <div>
+      <span class="block font-bold text-sm" id="toast-title">Notification</span>
+      <span class="block text-xs text-white/80" id="toast-desc">Message placeholder text</span>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
