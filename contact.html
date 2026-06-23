@@ -320,40 +320,46 @@
 
   <!-- CONTACT LAYOUT SECTION -->
   <section class="py-16 bg-white dark:bg-slate-900 transition-colors duration-300">
-    <div class="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 space-y-12">
       
-      <!-- Cards info (4 Cols) -->
-      <div class="lg:col-span-4 flex flex-col gap-6">
-        
-        <div class="bg-slate-50 dark:bg-slate-950 p-6 rounded-3xl border border-gray-150 dark:border-slate-850 shadow-sm flex gap-4">
+      <!-- Top Section: Address & Secretary Contacts stacked as grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Office Address -->
+        <div class="bg-slate-50 dark:bg-slate-950 p-6 md:p-8 rounded-3xl border border-gray-150 dark:border-slate-850 shadow-sm flex gap-4">
           <div class="w-12 h-12 bg-scoutGreen/5 rounded-2xl flex items-center justify-center text-scoutGreen text-xl flex-shrink-0 dark:bg-slate-900 dark:text-scoutGreen-light">
             <i class="fa-solid fa-location-dot"></i>
           </div>
-          <div class="space-y-1">
-            <h4 class="font-display font-extrabold text-sm text-scoutGreen dark:text-white uppercase tracking-wider">Office Address</h4>
-            <p class="text-xs text-gray-550 leading-relaxed">
+          <div class="space-y-2">
+            <h4 class="font-display font-extrabold text-sm md:text-base text-scoutGreen dark:text-white uppercase tracking-wider">Office Address</h4>
+            <p class="text-xs md:text-sm text-gray-550 leading-relaxed">
               Scouts & Guides Office, Topdhara Rd, Vinay Nagar, Pal Bhichala, Ajmer, Rajasthan 305001
             </p>
           </div>
         </div>
 
-        <div class="bg-slate-50 dark:bg-slate-950 p-6 rounded-3xl border border-gray-150 dark:border-slate-850 shadow-sm flex gap-4">
+        <!-- Secretary Contact -->
+        <div class="bg-slate-50 dark:bg-slate-950 p-6 md:p-8 rounded-3xl border border-gray-150 dark:border-slate-850 shadow-sm flex gap-4">
           <div class="w-12 h-12 bg-scoutGreen/5 rounded-2xl flex items-center justify-center text-scoutGreen text-xl flex-shrink-0 dark:bg-slate-900 dark:text-scoutGreen-light">
             <i class="fa-solid fa-user-tie"></i>
           </div>
-          <div class="space-y-1">
-            <h4 class="font-display font-extrabold text-sm text-scoutGreen dark:text-white uppercase tracking-wider">Secretary Contacts</h4>
-            <p class="text-xs text-charcoal dark:text-white font-bold">Rajender Prasad Saraswat</p>
-            <a href="tel:+919413629628" class="block text-xs text-gray-500 hover:text-scoutGreen">Call: 9413629628</a>
-            <a href="mailto:scoutguidelatopdaraajmer@gmail.com" class="block text-xs text-gray-500 hover:text-scoutGreen line-clamp-1">Email: scoutguidelatopdaraajmer@gmail.com</a>
+          <div class="space-y-2">
+            <h4 class="font-display font-extrabold text-sm md:text-base text-scoutGreen dark:text-white uppercase tracking-wider">Secretary Contact</h4>
+            <p class="text-xs md:text-sm text-charcoal dark:text-white font-bold">Rajender Prasad Saraswat</p>
+            <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 mt-1">
+              <a href="tel:+919413629628" class="text-xs md:text-sm text-gray-500 hover:text-scoutGreen flex items-center gap-1.5">
+                <i class="fa-solid fa-phone text-scoutGold"></i> 94136 29628
+              </a>
+              <a href="mailto:scoutguidelatopdaraajmer@gmail.com" class="text-xs md:text-sm text-gray-500 hover:text-scoutGreen flex items-center gap-1.5 text-ellipsis overflow-hidden whitespace-nowrap max-w-[200px] sm:max-w-none">
+                <i class="fa-solid fa-envelope text-scoutGold"></i> scoutguidelatopdaraajmer@gmail.com
+              </a>
+            </div>
           </div>
         </div>
-
       </div>
 
-      <!-- Form (8 Cols) -->
-      <div class="lg:col-span-8 bg-slate-50 dark:bg-slate-950 p-8 md:p-10 rounded-3xl border border-gray-150 dark:border-slate-850 shadow-sm">
-        <h3 class="font-display font-extrabold text-xl text-scoutGreen dark:text-white mb-6">SEND MESSAGE DIRECT TO OFFICE</h3>
+      <!-- Middle Section: Send msg Direct to Office Form -->
+      <div class="bg-slate-50 dark:bg-slate-950 p-8 md:p-10 rounded-3xl border border-gray-150 dark:border-slate-850 shadow-sm max-w-4xl mx-auto w-full">
+        <h3 class="font-display font-extrabold text-lg md:text-xl text-scoutGreen dark:text-white mb-6 uppercase tracking-wider text-center">SEND MESSAGE DIRECT TO OFFICE</h3>
         
         <form class="space-y-4" id="contact-form" data-action-name="Contact Form Submission">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -381,15 +387,12 @@
         </form>
       </div>
 
-    </div>
-
-    <!-- Key Contacts Directory Section -->
-    <div class="max-w-7xl mx-auto px-4 md:px-8 mt-16">
+      <!-- Bottom Section: Office Bearers & Contacts Directory Table -->
       <div class="bg-slate-50 dark:bg-slate-950 p-6 md:p-8 rounded-3xl border border-gray-150 dark:border-slate-850 shadow-sm space-y-6">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gray-200 dark:border-slate-800 pb-5">
           <div>
-            <h3 class="font-display font-extrabold text-xl text-scoutGreen dark:text-white uppercase tracking-wider">Office Bearers & Contacts Directory</h3>
-            <p class="text-xs text-gray-500 mt-1">Direct contact list of administrative heads and officers</p>
+            <h3 class="font-display font-extrabold text-xl text-scoutGreen dark:text-white uppercase tracking-wider">Office Bearers 2026-2027</h3>
+            <p class="text-xs text-gray-500 mt-1">Administrative hierarchy and directory</p>
           </div>
           <span class="text-[10px] bg-scoutGold/20 text-scoutGold-dark dark:text-scoutGold px-3 py-1.5 rounded-full font-bold self-start uppercase tracking-wider">Active Board</span>
         </div>
@@ -398,50 +401,117 @@
           <table class="w-full text-left border-collapse text-xs md:text-sm">
             <thead>
               <tr class="bg-scoutGreen text-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800">
-                <th class="p-4 font-bold text-center w-16">Sr. No</th>
+                <th class="p-4 font-bold text-center w-20">Sr. No</th>
+                <th class="p-4 font-bold">Post</th>
                 <th class="p-4 font-bold">Name</th>
-                <th class="p-4 font-bold">Designation</th>
-                <th class="p-4 font-bold">Contact No.</th>
-                <th class="p-4 font-bold">Mail Id</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-150 dark:divide-slate-800 bg-white dark:bg-slate-900 text-charcoal dark:text-slate-200">
+              <!-- Officers Category -->
+              <tr class="bg-slate-100 dark:bg-slate-800 font-bold text-scoutGreen dark:text-scoutGold">
+                <td colspan="3" class="p-3 text-center uppercase tracking-wider text-xs">Officers</td>
+              </tr>
               <tr class="hover:bg-slate-50 dark:hover:bg-slate-850 transition-colors">
                 <td class="p-4 text-center font-semibold">1</td>
-                <td class="p-4 font-bold">Rajender Prasad Saraswat</td>
-                <td class="p-4 font-medium text-scoutGreen dark:text-scoutGold">Secretary</td>
-                <td class="p-4">
-                  <a href="tel:+919413629628" class="hover:text-scoutGreen hover:underline flex items-center gap-1.5">
-                    <i class="fa-solid fa-phone text-[10px] text-scoutGold"></i> 94136 29628
-                  </a>
+                <td class="p-4 font-bold text-scoutGreen dark:text-white">Head</td>
+                <td class="p-4 font-medium">Sh. Mohan lal Sabu</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-850 transition-colors">
+                <td class="p-4 text-center font-semibold">2</td>
+                <td class="p-4 font-bold text-scoutGreen dark:text-white">Deputy Head</td>
+                <td class="p-4 font-medium space-y-1">
+                  <div>Sh. Omprakash Vaishnav</div>
+                  <div>Sh. Anand Mohan Kandoi</div>
+                  <div>Sh. Prajwal Shekhawat</div>
+                  <div>Smt. Champa Devi</div>
                 </td>
-                <td class="p-4">
-                  <a href="mailto:scoutguidelatopdaraajmer@gmail.com" class="hover:text-scoutGreen hover:underline flex items-center gap-1.5">
-                    <i class="fa-solid fa-envelope text-[10px] text-scoutGold"></i> scoutguidelatopdaraajmer@gmail.com
-                  </a>
+              </tr>
+              <!-- Executives Category -->
+              <tr class="bg-slate-100 dark:bg-slate-800 font-bold text-scoutGreen dark:text-scoutGold">
+                <td colspan="3" class="p-3 text-center uppercase tracking-wider text-xs">Executives</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-850 transition-colors">
+                <td class="p-4 text-center font-semibold">3</td>
+                <td class="p-4 font-bold text-scoutGreen dark:text-white">Executive Chairperson</td>
+                <td class="p-4 font-medium">Sh. Shimbu Singh Lamba</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-850 transition-colors">
+                <td class="p-4 text-center font-semibold">4</td>
+                <td class="p-4 font-bold text-scoutGreen dark:text-white">Assistant District Commissioner (Scout)</td>
+                <td class="p-4 font-medium">Sh. Amit Sharma</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-850 transition-colors">
+                <td class="p-4 text-center font-semibold">5</td>
+                <td class="p-4 font-bold text-scoutGreen dark:text-white">Assistant District Commissioner (Guide)</td>
+                <td class="p-4 font-medium text-gray-400">—</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-850 transition-colors">
+                <td class="p-4 text-center font-semibold">6</td>
+                <td class="p-4 font-bold text-scoutGreen dark:text-white">Assistant District Commissioner</td>
+                <td class="p-4 font-medium space-y-1">
+                  <div>Sh. Lokender</div>
+                  <div>Sh. R.K Srivastava</div>
+                  <div>Sh. Sanjay Dutta</div>
+                  <div>Sh. Prayag Singh Rajpurohit</div>
                 </td>
               </tr>
-              <!-- Empty rows as placeholders in the image -->
-              <tr class="hover:bg-slate-50 dark:hover:bg-slate-850 transition-colors h-12">
-                <td class="p-4 text-center text-gray-400">2</td>
-                <td class="p-4 text-gray-400 font-medium">—</td>
-                <td class="p-4 text-gray-400 font-medium">—</td>
-                <td class="p-4 text-gray-400">—</td>
-                <td class="p-4 text-gray-400">—</td>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-850 transition-colors">
+                <td class="p-4 text-center font-semibold">7</td>
+                <td class="p-4 font-bold text-scoutGreen dark:text-white">Secretary</td>
+                <td class="p-4 font-bold text-scoutGreen dark:text-scoutGold">Sh. Rajendra Prasad Saraswat</td>
               </tr>
-              <tr class="hover:bg-slate-50 dark:hover:bg-slate-850 transition-colors h-12">
-                <td class="p-4 text-center text-gray-400">3</td>
-                <td class="p-4 text-gray-400 font-medium">—</td>
-                <td class="p-4 text-gray-400 font-medium">—</td>
-                <td class="p-4 text-gray-400">—</td>
-                <td class="p-4 text-gray-400">—</td>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-850 transition-colors">
+                <td class="p-4 text-center font-semibold">8</td>
+                <td class="p-4 font-bold text-scoutGreen dark:text-white">Joint Secretary</td>
+                <td class="p-4 font-medium">Smt. Anshu Bhargav</td>
               </tr>
-              <tr class="hover:bg-slate-50 dark:hover:bg-slate-850 transition-colors h-12">
-                <td class="p-4 text-center text-gray-400">4</td>
-                <td class="p-4 text-gray-400 font-medium">—</td>
-                <td class="p-4 text-gray-400 font-medium">—</td>
-                <td class="p-4 text-gray-400">—</td>
-                <td class="p-4 text-gray-400">—</td>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-850 transition-colors">
+                <td class="p-4 text-center font-semibold">9</td>
+                <td class="p-4 font-bold text-scoutGreen dark:text-white">Assistant Secretary</td>
+                <td class="p-4 font-medium">Sh. Vishnu Singh Rathore</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-850 transition-colors">
+                <td class="p-4 text-center font-semibold">10</td>
+                <td class="p-4 font-bold text-scoutGreen dark:text-white">Treasurer</td>
+                <td class="p-4 font-medium">Sh. Prithvi Singh Mehra</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-850 transition-colors">
+                <td class="p-4 text-center font-semibold">11</td>
+                <td class="p-4 font-bold text-scoutGreen dark:text-white">Institutional Head Representative</td>
+                <td class="p-4 font-medium text-gray-400">—</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-850 transition-colors">
+                <td class="p-4 text-center font-semibold">12</td>
+                <td class="p-4 font-bold text-scoutGreen dark:text-white">Life Member Representative</td>
+                <td class="p-4 font-medium space-y-1">
+                  <div>Sh. Suryakant Tripati</div>
+                  <div>Sh. Ramesh Upadhya</div>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-850 transition-colors">
+                <td class="p-4 text-center font-semibold">13</td>
+                <td class="p-4 font-bold text-scoutGreen dark:text-white">Youth Representative</td>
+                <td class="p-4 font-medium space-y-1">
+                  <div>Sh. Premeshwar Bakseya</div>
+                  <div>Smt. Nandani</div>
+                  <div>Smt. Vinita</div>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-850 transition-colors">
+                <td class="p-4 text-center font-semibold">14</td>
+                <td class="p-4 font-bold text-scoutGreen dark:text-white">Scouter Representative</td>
+                <td class="p-4 font-medium space-y-1">
+                  <div>Sh. Varun Parik</div>
+                  <div>Sh. Mukesh Kumar Panday</div>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-850 transition-colors">
+                <td class="p-4 text-center font-semibold">15</td>
+                <td class="p-4 font-bold text-scoutGreen dark:text-white">Guider Representative</td>
+                <td class="p-4 font-medium space-y-1">
+                  <div>Smt. Neelu Sharma</div>
+                  <div>Smt. Vinita Sharma</div>
+                </td>
               </tr>
             </tbody>
           </table>
